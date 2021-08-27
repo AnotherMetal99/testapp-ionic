@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-splash-screen',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SplashScreenPage implements OnInit {
 
-  constructor() { }
+  constructor(private iab: InAppBrowser,public router: Router) {
+    setTimeout(()=>{
+      this.router.navigateByUrl('folder');
+    }, 5000);
+   }
 
   ngOnInit() {
   }

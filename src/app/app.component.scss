@@ -1,3 +1,24 @@
+ion-navbar {
+  background-color: rgb(255, 255, 255);
+  --ion-toolbar-background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  ion-button {
+    --background: darkgreen;
+  }
+  a img {
+    margin: 7px 0 7px 10px;
+    width: 60px;
+  }
+  ion-buttons {
+    color: #00a1e0;
+    font-size: 32px;
+    margin-right: 10px;
+  }
+}
 
 ion-menu{
   --ion-background-color: rgb(255, 255, 255);

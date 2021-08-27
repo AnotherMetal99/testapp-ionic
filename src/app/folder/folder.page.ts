@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-folder',
@@ -9,10 +10,24 @@ import { ActivatedRoute } from '@angular/router';
 export class FolderPage implements OnInit {
   public folder: string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private iab: InAppBrowser) { }
 
   ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+
+  }
+
+  open() {
+    const browser = this.iab.create('http://site.com');
+
+    browser.on('loadstop').subscribe(event => {
+      browser.close();
+
+    });
+
+    browser.on('exit').subscribe(event => {
+
+    });
+
   }
 
 }
