@@ -1,21 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-navbar>
+      <a href=""><img src="https://www.salesforce.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg" alt=""></a>
+      <ion-button>Try for free</ion-button>
+      <ion-icon name="menu" role="img" class="icon icon-ios ion-ios-menu" aria-label="menu"></ion-icon>
+    </ion-navbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="select-block">
+    <div class="container">
+      <p>Salesforse Platform</p>
+      <select id="leftnav-select" aria-labelledby="leftnav-select-text">
+        <option class="active " value="/fr/products/sales-cloud/overview/" selected="selected">Overview</option>
+        <option value="/fr/products/sales-cloud/features/">Fonctionnalités</option>
+        <option value="/fr/products/sales-cloud/pricing/">Formules d'abonnement</option>
+    </select>
+    </div>
   </div>
+
 </ion-content>
