@@ -1,3 +1,33 @@
 <ion-app>
-    <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="end" menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Home</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+        <ion-item>
+          <ion-icon name="mail" slot="right"></ion-icon>
+          <ion-label>Products</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="mail" slot="right"></ion-icon>
+          <ion-label>Resources</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="mail" slot="right"></ion-icon>
+          <ion-label>Assistance</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="mail" slot="right"></ion-icon>
+          <ion-label>Customer login</ion-label>
+        </ion-item>
+
+    </ion-content>
+  </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
